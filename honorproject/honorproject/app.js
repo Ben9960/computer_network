@@ -36,6 +36,7 @@ const webSocketServer = new wsModuel.Server(
 webSocketServer.on('connection', (ws, request)=>{
   // 1.연결 클라이언트 ip 취득
   const ip = request.headers['x-forward-for'] || request.connection.remoteAddress;
+
   console.log('새로운 클라이언트[${ip}] 접속');
 
   // 2.클라이언트에게 메세지 전송
@@ -61,7 +62,7 @@ webSocketServer.on('connection', (ws, request)=>{
   })
 });
 
-/* 
+/*
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
