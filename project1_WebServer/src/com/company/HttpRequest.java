@@ -13,6 +13,7 @@ enum StatusCode {
     OK, BAD_REQUEST, FORBIDDEN, NOT_FOUND, HTTP_VERSION_NOT_SUPPORTED, INTERNAL_SERVER_ERROR,
 }
 
+
 final class HttpRequest implements Runnable{
     final static String CRLF = "\r\n";
     final static String HTTP_VERSION = "1.1";
