@@ -91,7 +91,7 @@ final class HttpRequest implements Runnable{
             }
             sendResponseMessage(fis, os);
         } finally {
-            //close streams and socket (HTTP/1.0).
+            //close streams and socket (HTTP/1.0) .
             if(os != null)
                 os.close();
             if(br != null)
