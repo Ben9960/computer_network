@@ -12,6 +12,7 @@ app.use("/", (req, res)=>{
   res.sendFile(--__dirname + '.index.html'); //index html 파일 응답
 })
 
+
 //3. 30001 port에서 서버 구동
 const HTTPServer = app.listen(30001, ()=>{
   console.log("Server is opn at prot:30001");
