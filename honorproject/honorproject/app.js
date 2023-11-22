@@ -6,7 +6,6 @@
 const express = require('express');
 const app = express();
 
-
 //2. "/" 경로 라우팅 처리
 app.use("/", (req, res)=>{
   res.sendFile(--__dirname + '.index.html'); //index html 파일 응답
