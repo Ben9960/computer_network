@@ -13,6 +13,7 @@ enum StatusCode {
     OK, BAD_REQUEST, FORBIDDEN, NOT_FOUND, HTTP_VERSION_NOT_SUPPORTED, INTERNAL_SERVER_ERROR,
 }
 
+
 final class HttpRequest implements Runnable{
     final static String CRLF = "\r\n";
     final static String HTTP_VERSION = "1.1";
@@ -90,7 +91,7 @@ final class HttpRequest implements Runnable{
             }
             sendResponseMessage(fis, os);
         } finally {
-            //close streams and socket (HTTP/1.0).
+            //close streams and socket (HTTP/1.0) .
             if(os != null)
                 os.close();
             if(br != null)
